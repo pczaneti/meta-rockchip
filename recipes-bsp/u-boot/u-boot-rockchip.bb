@@ -85,7 +85,11 @@ do_compile:append() {
 		# Use Rockchip Miniloader
 		./make.sh ${RK_UBOOT_CFG}
 	fi
-	ln -sf *_loader*.bin "${RK_LOADER_BIN}"
+	if [ -f *_download_*.bin ] ; then
+		ln -sf *_download_*.bin "${RK_LOADER_BIN}"
+	else
+		ln -sf *_loader_*.bin "${RK_LOADER_BIN}"
+	fi
 
 	# Generate idblock image
 	bbnote "${PN}: Generating ${RK_IDBLOCK_IMG}..."
