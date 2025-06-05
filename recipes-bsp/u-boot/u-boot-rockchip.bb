@@ -4,7 +4,7 @@
 PATCHPATH = "${CURDIR}/u-boot-rockchip"
 inherit auto-patch
 
-inherit local-git python3-dir
+inherit python3-dir
 
 require recipes-bsp/u-boot/u-boot.inc
 require recipes-bsp/u-boot/u-boot-common.inc

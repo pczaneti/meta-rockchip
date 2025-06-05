@@ -7,9 +7,6 @@ DEPENDS:append = " openssl-native lz4-native ${PYTHON_PN}-native"
 
 LINUX_VERSION_EXTENSION ?= "-rockchip-${LINUX_KERNEL_TYPE}"
 
-PATCHPATH = "${THISDIR}/${BPN}_${LINUX_VERSION}"
-inherit auto-patch
-
 INSANE_SKIP:${PN}-src += "buildpaths"
 
 KCONFIG_MODE ?= "--alldefconfig"
