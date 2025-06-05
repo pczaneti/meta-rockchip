@@ -1,9 +1,6 @@
 # Copyright (C) 2019, Fuzhou Rockchip Electronics Co., Ltd
 # Released under the MIT license (see COPYING.MIT for the terms)
 
-PATCHPATH = "${CURDIR}/u-boot-rockchip"
-inherit auto-patch
-
 inherit python3-dir
 
 require recipes-bsp/u-boot/u-boot.inc
@@ -17,11 +14,12 @@ PV = "2017.09"
 
 LIC_FILES_CHKSUM = "file://Licenses/README;md5=a2c678cfd4a4d97135585cad908541c6"
 
-SRCREV = "a93658f8f45dc0266be21840931131b10c325e03"
-SRCREV_rkbin = "c41b714cacd249e3ef69b2bbe774da5095eefd72"
+SRCREV = "d2da6f0f4fb6adbad65cee6e97f516a9483eab46"
+SRCREV_rkbin = "d2da6f0f4fb6adbad65cee6e97f516a9483eab46"
 SRC_URI = " \
-	git://github.com/JeffyCN/mirrors.git;protocol=https;branch=u-boot; \
-	git://github.com/JeffyCN/mirrors.git;protocol=https;branch=rkbin;name=rkbin;destsuffix=rkbin; \
+	git://github.com/LuckfoxTECH/luckfox-pico;protocol=https;branch=main;subpath=sysdrv/source/uboot/u-boot;subdir=git; \
+	git://github.com/LuckfoxTECH/luckfox-pico;protocol=https;branch=main;name=rkbin;subpath=sysdrv/source/uboot/rkbin; \
+	file://0003-Revert-Makefile-enable-Werror-option.patch \
 "
 
 SRCREV_FORMAT = "default_rkbin"

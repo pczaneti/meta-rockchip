@@ -3,9 +3,9 @@
 
 require recipes-kernel/linux-libc-headers/linux-libc-headers.inc
 
-SRCREV = "72de5a560a44fb81549f1da325a1b3e323a7aaf7"
+SRCREV = "190bc3f5e1f67f9f92b9541643759173565f7075"
 SRC_URI = " \
-	git://github.com/JeffyCN/mirrors.git;protocol=https;nobranch=1;branch=kernel-5.10-2022_01_10; \
+	git://github.com/pczaneti/kernel.git;protocol=https;branch=develop-5.10-luckfux-pico; \
 "
 
 S = "${WORKDIR}/git"
